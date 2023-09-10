@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/constants.dart';
+
 class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppBar({super.key});
 
@@ -10,7 +12,15 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: const Icon(Icons.notifications),
+          icon: const Badge(
+            backgroundColor: Constants.colorRajah,
+            largeSize: 10.0,
+            offset: Offset(-2.0, 2.0),
+            label: SizedBox(
+              width: 2.0,
+            ),
+            child: Icon(Icons.notifications_outlined),
+          ),
         ),
       ],
     );

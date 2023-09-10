@@ -7,11 +7,42 @@ class Constants {
 
   static const String baseUrl = 'https://x.com';
 
+  static const Color colorRajah = Color(0xFFF5B358);
+  static const Color colorMGYellow = Color(0xFFA1C75C);
+  static const Color colorGunmetal = Color(0xFF2A2D37);
+  static const Color colorWhite = Colors.white;
+
+  static const TextStyle textStyleBody = TextStyle(
+    color: colorGunmetal,
+    fontSize: 14.0,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle textStyleSubHead = TextStyle(
+    color: colorGunmetal,
+    fontSize: 15.0,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle textStyleTitle = TextStyle(
+    color: colorGunmetal,
+    fontSize: 16.0,
+    fontWeight: FontWeight.w800,
+  );
+  static const TextStyle textStyleHeader = TextStyle(
+    color: colorGunmetal,
+    fontSize: 18.0,
+    fontWeight: FontWeight.w800,
+  );
+  static const TextStyle textStyleDisplay = TextStyle(
+    color: colorGunmetal,
+    fontSize: 22.0,
+    fontWeight: FontWeight.bold,
+  );
+
   static const int _defaultPrimarySwatchIndex = 0;
   static final List<MaterialColor> _primarySwatches =
       _getMaterialColorsFromColors(
     [
-      Colors.blue,
+      colorRajah,
     ],
   );
 

@@ -32,6 +32,18 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Constants.title,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Constants.colorWhite,
+          foregroundColor: Constants.colorGunmetal,
+          elevation: 0.0,
+          actionsIconTheme: const IconThemeData(
+            color: Constants.colorGunmetal,
+          ),
+          centerTitle: true,
+          titleTextStyle: Constants.textStyleBody.copyWith(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         fontFamily: Constants.fontFamily,
         primarySwatch: Constants.defaultPrimarySwatch,
       ),

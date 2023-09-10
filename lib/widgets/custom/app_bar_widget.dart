@@ -5,7 +5,15 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppBar();
+    return AppBar(
+      title: const Text('101, East Rajabazar, Tejgaon, Dhaka-1215'),
+      actions: [
+        IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.notifications),
+        ),
+      ],
+    );
   }
 
   @override

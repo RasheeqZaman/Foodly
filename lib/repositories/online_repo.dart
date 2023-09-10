@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:pranshakti/models/meals_list_model.dart';
 
 import '../utils/constants.dart';
 import '../utils/ui_utils.dart';
@@ -79,45 +78,5 @@ class OnlineRepo {
         data: null,
       );
     }
-  }
-
-  Future<ResponseModel<List<MealsListModel>?>> getMealsListModels() async {
-    return ResponseModel(
-      statusCode: 200,
-      data: [
-        MealsListModel(
-          imagePath: 'assets/fitness_app/breakfast.png',
-          titleTxt: 'Breakfast',
-          kacl: 525,
-          meals: <String>['Bread,', 'Peanut butter,', 'Apple'],
-          startColor: 0xFFFA7D82,
-          endColor: 0xFFFFB295,
-        ),
-        MealsListModel(
-          imagePath: 'assets/fitness_app/lunch.png',
-          titleTxt: 'Lunch',
-          kacl: 602,
-          meals: <String>['Salmon,', 'Mixed veggies,', 'Avocado'],
-          startColor: 0xFF738AE6,
-          endColor: 0xFF5C5EDD,
-        ),
-        MealsListModel(
-          imagePath: 'assets/fitness_app/snack.png',
-          titleTxt: 'Snack',
-          kacl: 0,
-          meals: <String>['Recommend:', '800 kcal'],
-          startColor: 0xFFFE95B6,
-          endColor: 0xFFFF5287,
-        ),
-        MealsListModel(
-          imagePath: 'assets/fitness_app/dinner.png',
-          titleTxt: 'Dinner',
-          kacl: 0,
-          meals: <String>['Recommend:', '703 kcal'],
-          startColor: 0xFF6F72CA,
-          endColor: 0xFF1E1466,
-        ),
-      ],
-    );
   }
 }

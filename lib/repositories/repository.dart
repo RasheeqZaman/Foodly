@@ -1,5 +1,3 @@
-import 'package:pranshakti/models/meals_list_model.dart';
-
 import '../models/user_model.dart';
 import 'hive_repo.dart';
 import 'online_repo.dart';
@@ -29,7 +27,4 @@ class Repository {
       PrefRepo.savePrimarySwatchIndex(index);
 
   Future<int?> getLocalPrimarySwatchIndex() => PrefRepo.getPrimarySwatchIndex();
-
-  Future<ResponseModel<List<MealsListModel>?>> getMealsListModels() =>
-      onlineRepo.getMealsListModels();
 }

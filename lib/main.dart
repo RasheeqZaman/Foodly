@@ -6,7 +6,7 @@ import 'utils/locator_utils.dart';
 import 'utils/provider_utils.dart';
 import 'utils/router_utils.dart';
 
-MyRouterName initRouterName = MyRouterName.splashScreen;
+MyRouterName initRouterName = MyRouterName.home;
 
 void main() async {
   await initPrefs();

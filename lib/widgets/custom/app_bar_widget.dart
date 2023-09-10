@@ -14,7 +14,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Constants.colorGrey,
           borderRadius: const BorderRadius.all(Radius.circular(20.0)),
         ),
-        child: const Text('101, East Rajabazar, Tejgaon, Dhaka-1215'),
+        child: const Row(
+          children: [
+            Expanded(
+              child: Text('101, East Rajabazar, Tejgaon, Dhaka-1215'),
+            ),
+            Icon(Icons.arrow_drop_down_outlined),
+          ],
+        ),
       ),
       actions: [
         IconButton(

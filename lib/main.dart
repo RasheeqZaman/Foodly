@@ -44,6 +44,10 @@ class MyApp extends StatelessWidget {
           titleTextStyle: Constants.textStyleBody.copyWith(
             fontWeight: FontWeight.bold,
           ),
+          shape: Border(
+            bottom: BorderSide(
+                color: Constants.colorGrey.withOpacity(0.5), width: 2.0),
+          ),
         ),
         fontFamily: Constants.fontFamily,
         primarySwatch: Constants.defaultPrimarySwatch,

@@ -8,7 +8,14 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('101, East Rajabazar, Tejgaon, Dhaka-1215'),
+      title: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+        decoration: BoxDecoration(
+          color: Constants.colorGrey,
+          borderRadius: const BorderRadius.all(Radius.circular(20.0)),
+        ),
+        child: const Text('101, East Rajabazar, Tejgaon, Dhaka-1215'),
+      ),
       actions: [
         IconButton(
           onPressed: () {},

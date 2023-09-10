@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
             color: Constants.colorGunmetal,
           ),
           centerTitle: true,
+          titleSpacing: 20.0,
           titleTextStyle: Constants.textStyleBody.copyWith(
             fontWeight: FontWeight.bold,
           ),

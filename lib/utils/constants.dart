@@ -11,6 +11,7 @@ class Constants {
   static const Color colorMGYellow = Color(0xFFA1C75C);
   static const Color colorGunmetal = Color(0xFF2A2D37);
   static const Color colorWhite = Colors.white;
+  static Color colorGrey = Colors.grey.shade200;
 
   static const TextStyle textStyleBody = TextStyle(
     color: colorGunmetal,

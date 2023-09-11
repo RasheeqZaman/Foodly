@@ -42,6 +42,13 @@ flutter:
           weight: 600
         - asset: assets/fonts/WorkSans-Bold.ttf
           weight: 700
+    - family: CeraRound
+      fonts:
+        - asset: assets/fonts/CeraRoundPro-Regular.otf
+        - asset: assets/fonts/CeraRoundPro-Medium.otf
+          weight: 500
+        - asset: assets/fonts/CeraRoundPro-Bold.otf
+          weight: 700
     - family: Roboto
       fonts:
         - asset: assets/fonts/Roboto-Bold.ttf

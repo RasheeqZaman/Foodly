@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Constants {
   static const String title = 'Foodly';
 
-  static const String fontFamily = 'Roboto';
+  static const String fontFamily = 'CeraRound';
 
   static const String baseUrl = 'https://x.com';
 
@@ -14,26 +14,31 @@ class Constants {
   static Color colorGrey = Colors.grey.shade200;
 
   static const TextStyle textStyleBody = TextStyle(
+    fontFamily: fontFamily,
     color: colorGunmetal,
     fontSize: 14.0,
     fontWeight: FontWeight.normal,
   );
   static const TextStyle textStyleSubHead = TextStyle(
+    fontFamily: fontFamily,
     color: colorGunmetal,
     fontSize: 15.0,
     fontWeight: FontWeight.normal,
   );
   static const TextStyle textStyleTitle = TextStyle(
+    fontFamily: fontFamily,
     color: colorGunmetal,
     fontSize: 16.0,
     fontWeight: FontWeight.w800,
   );
   static const TextStyle textStyleHeader = TextStyle(
+    fontFamily: fontFamily,
     color: colorGunmetal,
     fontSize: 18.0,
     fontWeight: FontWeight.w800,
   );
   static const TextStyle textStyleDisplay = TextStyle(
+    fontFamily: fontFamily,
     color: colorGunmetal,
     fontSize: 22.0,
     fontWeight: FontWeight.bold,

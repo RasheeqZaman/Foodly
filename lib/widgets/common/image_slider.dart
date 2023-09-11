@@ -10,12 +10,16 @@ class ImageSlider extends StatefulWidget {
     required this.borderRadius,
     this.aspectRatio = 1.8,
     this.boxFit = BoxFit.fitWidth,
+    this.showDotSelector = true,
+    this.imagePadding,
   }) : super(key: key);
 
   final List<String> imageLinks;
   final BorderRadius borderRadius;
   final double aspectRatio;
   final BoxFit boxFit;
+  final bool showDotSelector;
+  final EdgeInsets? imagePadding;
 
   @override
   State<ImageSlider> createState() => _ImageSliderState();
@@ -35,40 +39,33 @@ class _ImageSliderState extends State<ImageSlider> {
               children: [
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: ClipRRect(
-                    borderRadius: widget.borderRadius,
-                    clipBehavior: Clip.hardEdge,
-                    child: CarouselSlider(
-                      items: widget.imageLinks
-                          .map(
-                            (imageLink) => Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 0.0,
-                              ),
-                              child: CachedImageWidget(
-                                imageLink: imageLink,
-                                boxFit: widget.boxFit,
-                                borderRadius: widget.borderRadius,
-                              ),
-                            ),
-                          )
-                          .toList(),
-                      carouselController: _controller,
-                      options: CarouselOptions(
-                        viewportFraction: 1.0,
-                        autoPlay: (widget.imageLinks.length > 1),
-                        enlargeCenterPage: false,
-                        aspectRatio: widget.aspectRatio,
-                        onPageChanged: (index, reason) {
-                          setState(() {
-                            _current = index;
-                          });
-                        },
-                      ),
+                  child: CarouselSlider(
+                    items: widget.imageLinks
+                        .map(
+                          (imageLink) => CachedImageWidget(
+                            imageLink: imageLink,
+                            boxFit: widget.boxFit,
+                            borderRadius: widget.borderRadius,
+                            padding: widget.imagePadding,
+                          ),
+                        )
+                        .toList(),
+                    carouselController: _controller,
+                    options: CarouselOptions(
+                      viewportFraction: 1.0,
+                      autoPlay: (widget.imageLinks.length > 1),
+                      enlargeCenterPage: false,
+                      aspectRatio: widget.aspectRatio,
+                      autoPlayInterval: const Duration(seconds: 10),
+                      onPageChanged: (index, reason) {
+                        setState(() {
+                          _current = index;
+                        });
+                      },
                     ),
                   ),
                 ),
-                if (widget.imageLinks.length > 1)
+                if (widget.showDotSelector && widget.imageLinks.length > 1)
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 5.0),
                     child: Row(

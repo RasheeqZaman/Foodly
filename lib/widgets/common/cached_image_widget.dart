@@ -10,6 +10,7 @@ class CachedImageWidget extends StatelessWidget {
     this.height,
     this.borderRadius,
     this.boxFit = BoxFit.cover,
+    this.padding,
   }) : super(key: key);
 
   final String imageLink;
@@ -17,6 +18,7 @@ class CachedImageWidget extends StatelessWidget {
   final BoxShape? boxShape;
   final BorderRadiusGeometry? borderRadius;
   final BoxFit boxFit;
+  final EdgeInsets? padding;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +26,7 @@ class CachedImageWidget extends StatelessWidget {
       imageUrl: imageLink,
       imageBuilder: (context, imageProvider) {
         return Container(
+          margin: padding,
           decoration: BoxDecoration(
             borderRadius: borderRadius,
             shape: boxShape ?? BoxShape.rectangle,

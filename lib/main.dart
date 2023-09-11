@@ -46,7 +46,9 @@ class MyApp extends StatelessWidget {
           ),
           shape: Border(
             bottom: BorderSide(
-                color: Constants.colorGrey.withOpacity(0.5), width: 2.0),
+              color: Constants.colorGrey.withOpacity(0.5),
+              width: 2.0,
+            ),
           ),
         ),
         fontFamily: Constants.fontFamily,

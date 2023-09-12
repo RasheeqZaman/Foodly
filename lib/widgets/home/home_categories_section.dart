@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly/utils/constants.dart';
+import 'package:foodly/widgets/home/home_category_item.dart';
 import 'package:foodly/widgets/home/home_title_header.dart';
 
 import '../common/grid_view_widget.dart';
@@ -25,28 +25,7 @@ class HomeCategoriesSection extends StatelessWidget {
               emptyText: 'No categories available.',
               items: List<Widget>.generate(
                 5,
-                (index) => Column(
-                  children: [
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                        width: 60.0,
-                        height: 60.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Constants.colorGrey),
-                        ),
-                        child: const Icon(Icons.fastfood_outlined),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 2,
-                      child: Text(
-                        'Category ${index + 1}',
-                      ),
-                    ),
-                  ],
-                ),
+                (index) => HomeCategoryItem(index: index),
               ),
             ),
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/utils/constants.dart';
 
 import '../common/cached_image_widget.dart';
 
@@ -15,25 +16,43 @@ class HomeTopRestaurantsItem extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-        color: Colors.red,
-        borderRadius: BorderRadius.circular(15.0)
-      ),
+          color: Colors.red, borderRadius: BorderRadius.circular(15.0)),
+      margin: const EdgeInsets.all(10.0),
       child: Column(
         children: [
-          const Expanded(
+          Expanded(
             flex: 3,
             child: Stack(
               children: [
-                CachedImageWidget(
+                const CachedImageWidget(
                   imageLink: 'https://picsum.photos/id/14/200/200',
                 ),
-                Column(
-                  children: [
-                    Text('4.9'),
-                    Icon(Icons.star),
-                  ],
+                Align(
+                  alignment: AlignmentDirectional.topEnd,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Constants.colorWhite,
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    margin: const EdgeInsets.all(5.0),
+                    padding: const EdgeInsets.all(5.0),
+                    child: const Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          '4.9',
+                          style: Constants.textStyleHeader,
+                        ),
+                        SizedBox(height: 5.0),
+                        Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                Row(
+                const Row(
                   children: [
                     Icon(Icons.drive_eta),
                     Text('25'),

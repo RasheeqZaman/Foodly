@@ -36,24 +36,21 @@ class GridViewWidget extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           )
-        : Container(
-            padding: const EdgeInsets.all(5.0),
-            child: GridView.builder(
-              controller: scrollController,
-              itemCount: items.length,
-              scrollDirection: scrollDirection,
-              physics: physics,
-              shrinkWrap: shrinkWrap,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: crossAxisCount,
-                mainAxisSpacing: mainAxisSpacing,
-                crossAxisSpacing: childAxisSpacing,
-                childAspectRatio: childAspectRatio,
-              ),
-              itemBuilder: (BuildContext context, int index) {
-                return items[index];
-              },
+        : GridView.builder(
+            controller: scrollController,
+            itemCount: items.length,
+            scrollDirection: scrollDirection,
+            physics: physics,
+            shrinkWrap: shrinkWrap,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: crossAxisCount,
+              mainAxisSpacing: mainAxisSpacing,
+              crossAxisSpacing: childAxisSpacing,
+              childAspectRatio: childAspectRatio,
             ),
+            itemBuilder: (BuildContext context, int index) {
+              return items[index];
+            },
           );
   }
 }

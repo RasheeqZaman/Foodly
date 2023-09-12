@@ -16,7 +16,7 @@ class HomeSlider extends StatelessWidget {
       borderRadius: BorderRadius.circular(15.0),
       aspectRatio: 2.5,
       showDotSelector: false,
-      imagePadding: const EdgeInsets.symmetric(horizontal: 5.0),
+      imagePadding: const EdgeInsets.symmetric(horizontal: 10.0),
       boxFit: BoxFit.fitHeight,
     );
   }

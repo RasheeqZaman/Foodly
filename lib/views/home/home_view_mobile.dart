@@ -17,9 +17,9 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
     return const Scaffold(
       appBar: HomeAppBar(),
       drawer: AppDrawerWidget(),
-      body: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10.0),
           child: Column(
             children: [
               HomeSlider(),

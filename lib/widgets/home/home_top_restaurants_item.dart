@@ -16,7 +16,22 @@ class HomeTopRestaurantsItem extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(
-          color: Colors.red, borderRadius: BorderRadius.circular(15.0)),
+        borderRadius: BorderRadius.circular(15.0),
+        boxShadow: [
+          BoxShadow(
+            color: Constants.colorGunmetal.withOpacity(0.1),
+            offset: const Offset(1.0, 1.0),
+            blurRadius: 10.0,
+            spreadRadius: 1.0,
+          ),
+          const BoxShadow(
+            color: Colors.white,
+            offset: Offset.zero,
+            blurRadius: 0.0,
+            spreadRadius: 0.0,
+          ),
+        ],
+      ),
       margin: const EdgeInsets.all(10.0),
       child: Column(
         children: [
@@ -87,29 +102,47 @@ class HomeTopRestaurantsItem extends StatelessWidget {
           ),
           Expanded(
             flex: 4,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 6,
-                  child: Column(
-                    children: [
-                      Text('Restaurant ${index + 1}'),
-                      const Text('Chinese, Italian'),
-                    ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 10.0,
+                horizontal: 15.0,
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Expanded(
+                    flex: 13,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Restaurant ${index + 1}',
+                          style: Constants.textStyleHeader,
+                        ),
+                        const SizedBox(height: 1.0),
+                        Text(
+                          'Chinese, Italian',
+                          style: Constants.textStyleBody.copyWith(
+                            color: Constants.colorGunmetal.withOpacity(0.3),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const Expanded(
-                  flex: 4,
-                  child: Row(
-                    children: [
-                      Icon(Icons.wallet),
-                      Text('\$35'),
-                      Text('-'),
-                      Text('\$65'),
-                    ],
-                  ),
-                )
-              ],
+                  const SizedBox(width: 5.0),
+                  const Expanded(
+                    flex: 7,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Icon(Icons.wallet, size: 15.0),
+                        SizedBox(width: 10.0),
+                        Text('\$35-\$65'),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ],

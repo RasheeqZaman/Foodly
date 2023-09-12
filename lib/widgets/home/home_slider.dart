@@ -13,7 +13,7 @@ class HomeSlider extends StatelessWidget {
         'https://picsum.photos/id/11/500/200',
         'https://picsum.photos/id/13/500/200',
       ],
-      borderRadius: BorderRadius.circular(10.0),
+      borderRadius: BorderRadius.circular(15.0),
       aspectRatio: 2.5,
       showDotSelector: false,
       imagePadding: const EdgeInsets.symmetric(horizontal: 5.0),

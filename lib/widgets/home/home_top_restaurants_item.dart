@@ -42,6 +42,14 @@ class HomeTopRestaurantsItem extends StatelessWidget {
                 const CachedImageWidget(
                   imageLink: 'https://picsum.photos/id/14/500/200',
                 ),
+                CachedImageWidget(
+                  imageLink: 'https://picsum.photos/id/16/200/200',
+                  height: 40.0,
+                  width: 40.0,
+                  boxShape: BoxShape.circle,
+                  boxBorder: Border.all(color: Constants.colorWhite),
+                  padding: const EdgeInsets.all(10.0),
+                ),
                 Align(
                   alignment: AlignmentDirectional.topEnd,
                   child: Container(

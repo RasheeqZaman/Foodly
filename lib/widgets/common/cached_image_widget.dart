@@ -11,6 +11,7 @@ class CachedImageWidget extends StatelessWidget {
     this.borderRadius,
     this.boxFit = BoxFit.cover,
     this.padding,
+    this.boxBorder,
   }) : super(key: key);
 
   final String imageLink;
@@ -19,6 +20,7 @@ class CachedImageWidget extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final BoxFit boxFit;
   final EdgeInsets? padding;
+  final BoxBorder? boxBorder;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class CachedImageWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: borderRadius,
             shape: boxShape ?? BoxShape.rectangle,
+            border: boxBorder,
             image: DecorationImage(
               image: imageProvider,
               fit: boxFit,

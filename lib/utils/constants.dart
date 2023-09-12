@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Constants {
   static const String title = 'Foodly';
 
-  static const String fontFamily = 'CeraRound';
+  static const String fontFamily = 'RosaSans';
 
   static const String baseUrl = 'https://x.com';
 

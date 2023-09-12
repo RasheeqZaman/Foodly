@@ -12,10 +12,11 @@ class HomeTopRestaurantsSection extends StatelessWidget {
       children: [
         const HomeTitleHeader(title: 'Top Restaurants'),
         SizedBox(
-          height: 300.0,
+          height: 230.0,
           child: GridViewWidget(
             scrollDirection: Axis.horizontal,
             crossAxisCount: 1,
+            childAspectRatio: 0.7,
             emptyText: 'No restaurants available.',
             items: List<Widget>.generate(
               3,

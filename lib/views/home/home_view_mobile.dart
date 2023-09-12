@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/widgets/common/cached_image_widget.dart';
 import 'package:foodly/widgets/common/grid_view_widget.dart';
+import 'package:foodly/widgets/home/home_categories_section.dart';
 import 'package:foodly/widgets/home/home_search_field.dart';
 import 'package:foodly/widgets/home/home_slider.dart';
 
@@ -24,30 +25,7 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
             children: [
               const HomeSlider(),
               const HomeSearchField(),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text('Categories'),
-                  Text('View All'),
-                ],
-              ),
-              SizedBox(
-                height: 200.0,
-                child: GridViewWidget(
-                  scrollDirection: Axis.horizontal,
-                  crossAxisCount: 1,
-                  emptyText: 'No categories available.',
-                  items: List<Widget>.generate(
-                    3,
-                    (index) => Column(
-                      children: [
-                        const Icon(Icons.fastfood_outlined),
-                        Text('Category ${index + 1}'),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              const HomeCategoriesSection(),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

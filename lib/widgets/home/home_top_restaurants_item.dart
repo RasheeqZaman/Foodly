@@ -21,11 +21,11 @@ class HomeTopRestaurantsItem extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            flex: 3,
+            flex: 7,
             child: Stack(
               children: [
                 const CachedImageWidget(
-                  imageLink: 'https://picsum.photos/id/14/200/200',
+                  imageLink: 'https://picsum.photos/id/14/500/200',
                 ),
                 Align(
                   alignment: AlignmentDirectional.topEnd,
@@ -43,29 +43,49 @@ class HomeTopRestaurantsItem extends StatelessWidget {
                           '4.9',
                           style: Constants.textStyleHeader,
                         ),
-                        SizedBox(height: 5.0),
+                        SizedBox(height: 2.0),
                         Icon(
                           Icons.star,
                           color: Colors.amber,
+                          size: 15.0,
                         ),
                       ],
                     ),
                   ),
                 ),
-                const Row(
-                  children: [
-                    Icon(Icons.drive_eta),
-                    Text('25'),
-                    Text('-'),
-                    Text('30'),
-                    Text('min'),
-                  ],
+                Align(
+                  alignment: AlignmentDirectional.bottomEnd,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Constants.colorWhite.withOpacity(0.3),
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10.0),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(5.0),
+                    child: Row(
+                      children: [
+                        const Icon(
+                          Icons.drive_eta,
+                          size: 15.0,
+                        ),
+                        const SizedBox(width: 2.0),
+                        Text(
+                          '25-30',
+                          style: Constants.textStyleBody.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Text('min'),
+                      ],
+                    ),
+                  ),
                 )
               ],
             ),
           ),
           Expanded(
-            flex: 2,
+            flex: 4,
             child: Row(
               children: [
                 Expanded(

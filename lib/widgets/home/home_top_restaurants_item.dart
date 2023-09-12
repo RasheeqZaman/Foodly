@@ -57,19 +57,20 @@ class HomeTopRestaurantsItem extends StatelessWidget {
                   alignment: AlignmentDirectional.bottomEnd,
                   child: Container(
                     decoration: BoxDecoration(
-                      color: Constants.colorWhite.withOpacity(0.3),
+                      color: Constants.colorWhite.withOpacity(0.8),
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(10.0),
                       ),
                     ),
                     padding: const EdgeInsets.all(5.0),
                     child: Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         const Icon(
                           Icons.drive_eta,
                           size: 15.0,
                         ),
-                        const SizedBox(width: 2.0),
+                        const SizedBox(width: 5.0),
                         Text(
                           '25-30',
                           style: Constants.textStyleBody.copyWith(

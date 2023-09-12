@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/widgets/common/cached_image_widget.dart';
 import 'package:foodly/widgets/common/grid_view_widget.dart';
-import 'package:foodly/widgets/common/image_slider.dart';
+import 'package:foodly/widgets/home/home_search_field.dart';
+import 'package:foodly/widgets/home/home_slider.dart';
 
 import '../../view_models/home_view_model.dart';
 import '../../widgets/base_model_widget.dart';
@@ -21,32 +22,8 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              ImageSlider(
-                imageLinks: const [
-                  'https://picsum.photos/id/10/500/200',
-                  'https://picsum.photos/id/11/500/200',
-                  'https://picsum.photos/id/13/500/200',
-                ],
-                borderRadius: BorderRadius.circular(10.0),
-                aspectRatio: 2.5,
-                showDotSelector: false,
-                imagePadding: const EdgeInsets.symmetric(horizontal: 5.0),
-                boxFit: BoxFit.fitHeight,
-              ),
-              const Row(
-                children: [
-                  Icon(Icons.search),
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Search food and restaurants',
-                      ),
-                    ),
-                  ),
-                  Icon(Icons.filter_list_outlined),
-                ],
-              ),
+              const HomeSlider(),
+              const HomeSearchField(),
               const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

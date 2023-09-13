@@ -11,35 +11,7 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Near by Restaurants',
-                style: Constants.textStyleTitle,
-              ),
-              const SizedBox(height: 2.0),
-              Row(
-                children: [
-                  Text(
-                    '200+',
-                    style: Constants.textStyleBody
-                        .copyWith(fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(width: 2.0),
-                  Text(
-                    'Restaurants found near you',
-                    style: Constants.textStyleBody.copyWith(
-                      color: Constants.colorGunmetal.withOpacity(0.7),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
+        const HomeNearByRestaurantsTitle(),
         GridViewWidget(
           crossAxisCount: 1,
           shrinkWrap: true,
@@ -51,6 +23,43 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class HomeNearByRestaurantsTitle extends StatelessWidget {
+  const HomeNearByRestaurantsTitle({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Near by Restaurants',
+            style: Constants.textStyleTitle,
+          ),
+          const SizedBox(height: 2.0),
+          Row(
+            children: [
+              Text(
+                '200+',
+                style: Constants.textStyleBody
+                    .copyWith(fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(width: 2.0),
+              Text(
+                'Restaurants found near you',
+                style: Constants.textStyleBody.copyWith(
+                  color: Constants.colorGunmetal.withOpacity(0.7),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

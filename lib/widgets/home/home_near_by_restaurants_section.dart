@@ -25,6 +25,7 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
             (index) => HomeNearByRestaurantsItem(index: index),
           ),
         ),
+        const SizedBox(height: 10.0),
       ],
     );
   }

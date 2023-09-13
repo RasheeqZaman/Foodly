@@ -18,19 +18,22 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
     return const Scaffold(
       appBar: HomeAppBar(),
       drawer: AppDrawerWidget(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.0),
-          child: Column(
-            children: [
-              HomeSlider(),
-              HomeSearchField(),
-              HomeCategoriesSection(),
-              HomeTopRestaurantsSection(),
-              HomeNearByRestaurantsSection(),
-            ],
+      body: Column(
+        children: [
+          HomeSlider(),
+          HomeSearchField(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  HomeCategoriesSection(),
+                  HomeTopRestaurantsSection(),
+                  HomeNearByRestaurantsSection(),
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

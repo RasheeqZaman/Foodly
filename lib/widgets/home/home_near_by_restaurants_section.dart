@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/widgets/common/cached_image_widget.dart';
 
 import '../../utils/constants.dart';
 import '../common/grid_view_widget.dart';
@@ -17,9 +18,11 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           emptyText: 'No restaurants available.',
+          mainAxisSpacing: 15.0,
+          childAspectRatio: 3.5,
           items: List<Widget>.generate(
             3,
-            (index) => Text('Restaurant $index'),
+            (index) => HomeNearByRestaurantsItem(index: index),
           ),
         ),
       ],
@@ -57,6 +60,100 @@ class HomeNearByRestaurantsTitle extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class HomeNearByRestaurantsItem extends StatelessWidget {
+  const HomeNearByRestaurantsItem({
+    super.key,
+    required this.index,
+  });
+
+  final int index;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+      margin: const EdgeInsets.symmetric(horizontal: 10.0),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 25,
+            child: CachedImageWidget(
+              imageLink: 'https://picsum.photos/id/14/200/200',
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+          ),
+          Expanded(
+            flex: 75,
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Restaurant ${index + 1}',
+                        style: Constants.textStyleTitle,
+                      ),
+                      const SizedBox(height: 5.0),
+                      Text(
+                        'Chinese . Coffee . Fast food',
+                        style: Constants.textStyleBody.copyWith(
+                          color: Constants.colorGunmetal.withOpacity(0.7),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.star,
+                            size: 15.0,
+                            color: Colors.amber,
+                          ),
+                          const SizedBox(width: 2.0),
+                          Text(
+                            '4.5',
+                            style: Constants.textStyleBody.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(width: 10.0),
+                      Row(
+                        children: [
+                          const Icon(Icons.drive_eta, size: 15.0),
+                          Text(
+                            'Delivery',
+                            style: Constants.textStyleBody.copyWith(
+                              color: Constants.colorGunmetal.withOpacity(0.7),
+                            ),
+                          ),
+                          Text(
+                            '\$12',
+                            style: Constants.textStyleBody.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
           ),
         ],
       ),

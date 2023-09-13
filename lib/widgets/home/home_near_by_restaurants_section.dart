@@ -21,7 +21,7 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
           mainAxisSpacing: 15.0,
           childAspectRatio: 3.5,
           items: List<Widget>.generate(
-            3,
+            7,
             (index) => HomeNearByRestaurantsItem(index: index),
           ),
         ),
@@ -78,7 +78,6 @@ class HomeNearByRestaurantsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       margin: const EdgeInsets.symmetric(horizontal: 10.0),
       child: Row(
         children: [
@@ -122,7 +121,7 @@ class HomeNearByRestaurantsItem extends StatelessWidget {
                             size: 15.0,
                             color: Colors.amber,
                           ),
-                          const SizedBox(width: 2.0),
+                          const SizedBox(width: 5.0),
                           Text(
                             '4.5',
                             style: Constants.textStyleBody.copyWith(
@@ -131,16 +130,18 @@ class HomeNearByRestaurantsItem extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBox(width: 10.0),
+                      const SizedBox(width: 25.0),
                       Row(
                         children: [
                           const Icon(Icons.drive_eta, size: 15.0),
+                          const SizedBox(width: 5.0),
                           Text(
                             'Delivery',
                             style: Constants.textStyleBody.copyWith(
                               color: Constants.colorGunmetal.withOpacity(0.7),
                             ),
                           ),
+                          const SizedBox(width: 5.0),
                           Text(
                             '\$12',
                             style: Constants.textStyleBody.copyWith(

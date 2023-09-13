@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/widgets/home/home_categories_section.dart';
+import 'package:foodly/widgets/home/home_near_by_restaurants_section.dart';
 import 'package:foodly/widgets/home/home_search_field.dart';
 import 'package:foodly/widgets/home/home_slider.dart';
 import 'package:foodly/widgets/home/home_top_restaurants_section.dart';
@@ -26,6 +27,7 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
               HomeSearchField(),
               HomeCategoriesSection(),
               HomeTopRestaurantsSection(),
+              HomeNearByRestaurantsSection(),
             ],
           ),
         ),

@@ -51,15 +51,19 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          selectedIconTheme: IconThemeData(
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedIconTheme: const IconThemeData(
             size: 22.0,
           ),
-          unselectedIconTheme: IconThemeData(
+          unselectedIconTheme: const IconThemeData(
             size: 22.0,
           ),
-          selectedLabelStyle: Constants.textStyleBody,
-          unselectedLabelStyle: Constants.textStyleBody,
+          selectedLabelStyle: Constants.textStyleBody.copyWith(
+            fontSize: 12.0,
+          ),
+          unselectedLabelStyle: Constants.textStyleBody.copyWith(
+            fontSize: 12.0,
+          ),
           selectedItemColor: Constants.colorRajah,
           unselectedItemColor: Constants.colorGunmetal,
           showSelectedLabels: true,

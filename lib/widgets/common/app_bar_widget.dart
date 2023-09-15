@@ -28,11 +28,6 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {},
           icon: const Badge(
             backgroundColor: Constants.colorRajah,
-            largeSize: 10.0,
-            offset: Offset(-2.0, 2.0),
-            label: SizedBox(
-              width: 2.0,
-            ),
             child: Icon(Icons.notifications_outlined),
           ),
         ),

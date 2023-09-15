@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../utils/constants.dart';
+
 class BottomBarWidget extends StatefulWidget {
   const BottomBarWidget({
     super.key,
@@ -28,7 +30,10 @@ class _BottomBarWidgetState extends State<BottomBarWidget> {
           label: 'Near by',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.shopping_cart_outlined),
+          icon: Badge(
+            backgroundColor: Constants.colorRajah,
+            child: Icon(Icons.shopping_cart_outlined),
+          ),
           label: 'Cart',
         ),
         BottomNavigationBarItem(

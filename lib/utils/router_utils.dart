@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
-import '../views/home/home_view.dart';
+import '../views/main/main_view.dart';
 
 enum MyRouterName {
-  home,
+  main,
 }
 
 extension ParseToString on MyRouterName {
   String getName() {
-    if (this == MyRouterName.home) return '/';
+    if (this == MyRouterName.main) return '/';
     return toString();
   }
 }
 
 class MyRouter {
   static final Map<String, Widget Function(BuildContext)> routes = {
-    MyRouterName.home.getName(): (_) => const HomeView(),
+    MyRouterName.main.getName(): (_) => const MainView(),
   };
 
   static Route<dynamic> generateRoute(RouteSettings settings) {

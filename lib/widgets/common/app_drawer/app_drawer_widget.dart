@@ -21,7 +21,7 @@ class AppDrawerWidget extends StatelessWidget {
             onTap: () {
               Navigator.pushNamedAndRemoveUntil(
                 context,
-                MyRouterName.home.getName(),
+                MyRouterName.main.getName(),
                 (route) => false,
               );
             },

@@ -23,6 +23,7 @@ class HomeCategoriesSection extends StatelessWidget {
               crossAxisCount: 1,
               childAspectRatio: 1.6,
               emptyText: 'No categories available.',
+              physics: const BouncingScrollPhysics(),
               items: List<Widget>.generate(
                 5,
                 (index) => HomeCategoryItem(index: index),

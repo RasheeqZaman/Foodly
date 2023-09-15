@@ -20,6 +20,7 @@ class HomeTopRestaurantsSection extends StatelessWidget {
             crossAxisCount: 1,
             childAspectRatio: 0.6,
             emptyText: 'No restaurants available.',
+            physics: const BouncingScrollPhysics(),
             items: List<Widget>.generate(
               3,
               (index) => HomeTopRestaurantsItem(index: index),

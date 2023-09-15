@@ -24,6 +24,7 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
           HomeSearchField(),
           Expanded(
             child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
               child: Column(
                 children: [
                   HomeCategoriesSection(),

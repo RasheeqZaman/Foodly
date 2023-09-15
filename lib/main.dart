@@ -51,6 +51,20 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+          selectedIconTheme: IconThemeData(
+            size: 22.0,
+          ),
+          unselectedIconTheme: IconThemeData(
+            size: 22.0,
+          ),
+          selectedLabelStyle: Constants.textStyleBody,
+          unselectedLabelStyle: Constants.textStyleBody,
+          selectedItemColor: Constants.colorRajah,
+          unselectedItemColor: Constants.colorGunmetal,
+          showSelectedLabels: true,
+          showUnselectedLabels: true,
+        ),
         fontFamily: Constants.fontFamily,
         primarySwatch: Constants.defaultPrimarySwatch,
       ),

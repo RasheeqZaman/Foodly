@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foodly/views/home/home_view.dart';
 
 import '../../view_models/main_view_model.dart';
 import '../../widgets/base_model_widget.dart';
@@ -21,7 +20,7 @@ class MainMobilePortrait extends BaseModelWidget<MainViewModel> {
           model.onChangeBottomTab(index);
         },
       ),
-      body: const HomeView(),
+      body: model.selectedTab,
     );
   }
 }

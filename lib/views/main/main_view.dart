@@ -11,8 +11,9 @@ class MainView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final int? args = ModalRoute.of(context)?.settings.arguments as int?;
     return BaseWidget<MainViewModel>(
-      viewModel: MainViewModel(),
+      viewModel: MainViewModel(selectedIndex: args ?? 0),
       child: ScreenTypeLayout<MainViewModel>(
         mobile: OrientationLayout<MainViewModel>(
           portrait: (_) => const MainMobilePortrait(),

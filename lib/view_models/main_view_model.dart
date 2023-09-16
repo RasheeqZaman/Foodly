@@ -17,11 +17,11 @@ class MainViewModel extends BaseViewModel {
   final List<MainModel> _tabs = [
     MainModel(
       appBar: () => const HomeAppBar(),
-      tab: () => const HomeView(),
+      tab: () => const HomeView(isNearByTab: false),
     ),
     MainModel(
       appBar: () => const HomeAppBar(),
-      tab: () => const Center(child: Text('Near by')),
+      tab: () => const HomeView(isNearByTab: true),
     ),
     MainModel(
       appBar: () => const CartAppBar(),

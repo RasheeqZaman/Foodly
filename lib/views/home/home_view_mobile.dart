@@ -13,20 +13,21 @@ class HomeMobilePortrait extends BaseModelWidget<HomeViewModel> {
 
   @override
   Widget build(BuildContext context, HomeViewModel model) {
-    return const Column(
+    return Column(
       children: [
-        HomeSlider(),
-        HomeSearchField(),
+        const HomeSlider(),
+        const HomeSearchField(),
         Expanded(
           child: SingleChildScrollView(
-            physics: BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                HomeCategoriesSection(),
-                HomeTopRestaurantsSection(),
-                HomeNearByRestaurantsSection(),
-              ],
-            ),
+            physics: const BouncingScrollPhysics(),
+            child: (model.isNearByTab)
+                ? const HomeNearByRestaurantsSection()
+                : const Column(
+                    children: [
+                      HomeCategoriesSection(),
+                      HomeTopRestaurantsSection(),
+                    ],
+                  ),
           ),
         ),
       ],

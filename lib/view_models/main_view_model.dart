@@ -22,7 +22,7 @@ class MainViewModel extends BaseViewModel {
       tab: () => const Center(child: Text('Cart')),
     ),
     MainModel(
-      appBar: () => const HomeAppBar(),
+      appBar: () => const AccountAppBar(),
       tab: () => const Center(child: Text('Account')),
     ),
   ];

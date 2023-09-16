@@ -33,7 +33,21 @@ class CartAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomAppBar(
-      title: Text('Cart'),
+      title: Text('My Cart'),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
+
+class AccountAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const AccountAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CustomAppBar(
+      title: Text('Account'),
     );
   }
 

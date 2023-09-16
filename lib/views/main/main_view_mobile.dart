@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/views/account/account_view.dart';
 
 import '../../view_models/main_view_model.dart';
 import '../../widgets/base_model_widget.dart';
 import '../../widgets/common/app_drawer/app_drawer_widget.dart';
 import '../../widgets/common/bottom_bar_widget.dart';
+import '../cart/cart_view.dart';
 import '../home_category/home_category_view.dart';
 import '../home_near_by/home_near_by_view.dart';
 
@@ -29,8 +31,8 @@ class MainMobilePortrait extends BaseModelWidget<MainViewModel> {
               children: const [
                 HomeCategoryView(),
                 HomeNearByView(),
-                Center(child: Text('Cart')),
-                Center(child: Text('Account')),
+                CartView(),
+                AccountView(),
               ],
             ),
     );

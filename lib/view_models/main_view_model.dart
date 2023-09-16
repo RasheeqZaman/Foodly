@@ -42,6 +42,9 @@ class MainViewModel extends BaseViewModel implements TickerProvider {
   @override
   void initViewModel(BuildContext context) {
     _tabController = TabController(length: 4, vsync: this);
+    _tabController?.addListener(() {
+      notifyListeners();
+    });
     notifyListeners();
   }
 

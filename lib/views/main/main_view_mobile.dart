@@ -23,6 +23,7 @@ class MainMobilePortrait extends BaseModelWidget<MainViewModel> {
       body: (model.tabController == null)
           ? const SizedBox.shrink()
           : TabBarView(
+              physics: const BouncingScrollPhysics(),
               controller: model.tabController,
               children: const [
                 HomeView(isNearByTab: false),

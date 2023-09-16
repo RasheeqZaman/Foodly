@@ -17,19 +17,19 @@ class MainViewModel extends BaseViewModel {
   final List<MainModel> _tabs = [
     MainModel(
       appBar: () => const HomeAppBar(),
-      tab: () => const HomeView(isNearByTab: false),
+      tab: const HomeView(isNearByTab: false),
     ),
     MainModel(
       appBar: () => const HomeAppBar(),
-      tab: () => const HomeView(isNearByTab: true),
+      tab: const HomeView(isNearByTab: true),
     ),
     MainModel(
       appBar: () => const CartAppBar(),
-      tab: () => const Center(child: Text('Cart')),
+      tab: const Center(child: Text('Cart')),
     ),
     MainModel(
       appBar: () => const AccountAppBar(),
-      tab: () => const Center(child: Text('Account')),
+      tab: const Center(child: Text('Account')),
     ),
   ];
 
@@ -41,7 +41,7 @@ class MainViewModel extends BaseViewModel {
   Widget get selectedTab =>
       (_selectedIndex < 0 || _selectedIndex >= _tabs.length)
           ? const Center(child: Text('Invalid Tab'))
-          : _tabs[_selectedIndex].tab();
+          : _tabs[_selectedIndex].tab;
 
   @override
   void disposeViewModel() {}

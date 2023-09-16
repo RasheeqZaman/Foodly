@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'base_view_model.dart';
 
-class HomeViewModel extends BaseViewModel {
+class HomeCategoryViewModel extends BaseViewModel {
   @override
   void disposeViewModel() {}
 

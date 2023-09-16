@@ -4,7 +4,8 @@ import '../../view_models/main_view_model.dart';
 import '../../widgets/base_model_widget.dart';
 import '../../widgets/common/app_drawer/app_drawer_widget.dart';
 import '../../widgets/common/bottom_bar_widget.dart';
-import '../home/home_view.dart';
+import '../home_category/home_category_view.dart';
+import '../home_near_by/home_near_by_view.dart';
 
 class MainMobilePortrait extends BaseModelWidget<MainViewModel> {
   const MainMobilePortrait({super.key});
@@ -26,8 +27,8 @@ class MainMobilePortrait extends BaseModelWidget<MainViewModel> {
               physics: const BouncingScrollPhysics(),
               controller: model.tabController,
               children: const [
-                HomeView(isNearByTab: false),
-                HomeView(isNearByTab: true),
+                HomeCategoryView(),
+                HomeNearByView(),
                 Center(child: Text('Cart')),
                 Center(child: Text('Account')),
               ],

@@ -9,15 +9,12 @@ import 'home_view_mobile.dart';
 class HomeView extends StatelessWidget {
   const HomeView({
     Key? key,
-    required this.isNearByTab,
   }) : super(key: key);
-
-  final bool isNearByTab;
 
   @override
   Widget build(BuildContext context) {
     return BaseWidget<HomeViewModel>(
-      viewModel: HomeViewModel(isNearByTab: isNearByTab),
+      viewModel: HomeViewModel(),
       child: ScreenTypeLayout<HomeViewModel>(
         mobile: OrientationLayout<HomeViewModel>(
           portrait: (_) => const HomeMobilePortrait(),

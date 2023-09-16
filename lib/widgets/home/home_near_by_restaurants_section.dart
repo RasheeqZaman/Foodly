@@ -13,6 +13,7 @@ class HomeNearByRestaurantsSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const HomeNearByRestaurantsTitle(),
+        const SizedBox(height: 10.0),
         GridViewWidget(
           crossAxisCount: 1,
           shrinkWrap: true,
@@ -37,7 +38,7 @@ class HomeNearByRestaurantsTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 30.0, horizontal: 10.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

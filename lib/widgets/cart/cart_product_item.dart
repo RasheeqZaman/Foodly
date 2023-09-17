@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly/utils/constants.dart';
 
 import '../common/cached_image_widget.dart';
 
@@ -12,39 +13,63 @@ class CartProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          flex: 2,
-          child: CachedImageWidget(
-            imageLink: 'https://picsum.photos/id/14/200/200',
-            borderRadius: BorderRadius.circular(10.0),
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 15.0),
+      decoration: BoxDecoration(
+        color: Constants.colorWhite,
+        border: Border(
+          bottom: BorderSide(
+            color: Constants.colorGrey.withOpacity(0.5),
+            width: 1.0,
           ),
         ),
-        Expanded(
-          flex: 6,
-          child: Row(
-            children: [
-              Expanded(
-                flex: 2,
-                child: Text('${index+1}'),
-              ),
-              const Expanded(
-                flex: 2,
-                child: Text('x'),
-              ),
-              const Expanded(
-                flex: 6,
-                child: Text('Cheese Burger'),
-              ),
-            ],
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: CachedImageWidget(
+              imageLink: 'https://picsum.photos/id/14/200/200',
+              borderRadius: BorderRadius.circular(10.0),
+            ),
           ),
-        ),
-        const Expanded(
-          flex: 2,
-          child: Text('\$14.46'),
-        ),
-      ],
+          Expanded(
+            flex: 6,
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: Text(
+                    '${index + 1}',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const Expanded(
+                  flex: 2,
+                  child: Text(
+                    'x',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const Expanded(
+                  flex: 6,
+                  child: Text(
+                    'Cheese Burger',
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Expanded(
+            flex: 2,
+            child: Text(
+              '\$14.46',
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -15,8 +15,8 @@ class CartProductSection extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           emptyText: 'No cart item available.',
-          mainAxisSpacing: 15.0,
-          childAspectRatio: 3.5,
+          mainAxisSpacing: 0.0,
+          childAspectRatio: 5.0,
           items: List<Widget>.generate(
             3,
             (index) => CartProductItem(index: index),

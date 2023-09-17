@@ -7,17 +7,22 @@ class CartCheckoutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 5.0),
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+      margin: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 15.0),
+      padding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 15.0),
       decoration: BoxDecoration(
         color: Constants.colorRajah,
         borderRadius: BorderRadius.circular(10.0),
       ),
-      child: const Row(
+      child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('20-25 min'),
-          Text('Checkout'),
+          const Text('20-25 min'),
+          Text(
+            'Checkout',
+            style: Constants.textStyleBody.copyWith(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
         ],
       ),
     );

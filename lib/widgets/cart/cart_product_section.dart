@@ -21,7 +21,7 @@ class CartProductSection extends StatelessWidget {
           mainAxisSpacing: 0.0,
           childAspectRatio: 5.0,
           items: List<Widget>.generate(
-            3,
+            10,
             (index) => CartProductItem(index: index),
           ),
         ),

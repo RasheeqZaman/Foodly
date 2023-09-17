@@ -35,36 +35,48 @@ class CartProductItem extends StatelessWidget {
           ),
           Expanded(
             flex: 6,
-            child: Row(
-              children: [
-                Expanded(
-                  flex: 2,
-                  child: Text(
-                    '${index + 1}',
-                    textAlign: TextAlign.center,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 3,
+                    child: Text(
+                      '${index + 1}',
+                      style: Constants.textStyleBody.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-                const Expanded(
-                  flex: 2,
-                  child: Text(
-                    'x',
-                    textAlign: TextAlign.center,
+                  Expanded(
+                    flex: 3,
+                    child: Text(
+                      'x',
+                      style: Constants.textStyleBody.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-                const Expanded(
-                  flex: 6,
-                  child: Text(
-                    'Cheese Burger',
-                    textAlign: TextAlign.center,
+                  Expanded(
+                    flex: 16,
+                    child: Text(
+                      'Cheese Burger',
+                      style: Constants.textStyleBody.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
-          const Expanded(
+          Expanded(
             flex: 2,
             child: Text(
               '\$14.46',
+              style: Constants.textStyleBody.copyWith(
+                color: Constants.colorGunmetal.withOpacity(0.5),
+              ),
               textAlign: TextAlign.center,
             ),
           ),

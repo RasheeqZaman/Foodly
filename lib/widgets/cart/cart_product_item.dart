@@ -77,7 +77,7 @@ class CartProductItem extends StatelessWidget {
               style: Constants.textStyleBody.copyWith(
                 color: Constants.colorGunmetal.withOpacity(0.5),
               ),
-              textAlign: TextAlign.center,
+              textAlign: TextAlign.right,
             ),
           ),
         ],

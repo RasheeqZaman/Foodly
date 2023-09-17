@@ -16,7 +16,7 @@ class CartProductItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Slidable(
       endActionPane: ActionPane(
-        motion: const ScrollMotion(),
+        motion: const BehindMotion(),
         extentRatio: 0.2,
         children: [
           SlidableAction(

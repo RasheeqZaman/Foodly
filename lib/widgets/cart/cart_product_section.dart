@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../common/grid_view_widget.dart';
+import 'cart_delivery_section.dart';
 import 'cart_product_item.dart';
+import 'cart_total_section.dart';
 
 class CartProductSection extends StatelessWidget {
   const CartProductSection({super.key});
@@ -10,6 +12,7 @@ class CartProductSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(height: 20.0),
         GridViewWidget(
           crossAxisCount: 1,
           shrinkWrap: true,
@@ -22,6 +25,8 @@ class CartProductSection extends StatelessWidget {
             (index) => CartProductItem(index: index),
           ),
         ),
+        const CartDeliverySection(),
+        const CartTotalSection(),
       ],
     );
   }
